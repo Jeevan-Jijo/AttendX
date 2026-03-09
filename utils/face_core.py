@@ -15,12 +15,9 @@ def get_face_detector():
     haar_cascade = cv2.CascadeClassifier(cascade_path)
     
     try:
-        # Use a face-specific YOLO model.
-        face_model_path = os.path.join(MODELS_DIR, "yolov8n-face.pt")
-        model_path = face_model_path if os.path.exists(face_model_path) else "yolov8n-face.pt"
-        yolo_model = YOLO(model_path)
+        yolo_model = YOLO("yolov8n.pt")
     except Exception as e:
-        print(f"Error loading YOLO face model (expected yolov8n-face.pt): {e}")
+        print(f"Error loading YOLO: {e}")
         yolo_model = None
         
     return (yolo_model, haar_cascade)
