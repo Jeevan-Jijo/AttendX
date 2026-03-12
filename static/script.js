@@ -294,19 +294,19 @@ async function fetchLogs() {
             if (log.Date === today) namesToday.add(log.Name);
 
             const div = document.createElement('div');
-            div.className = "flex items-center justify-between p-3 rounded-xl hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700 cursor-default";
+            div.className = "flex items-center justify-between p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200 cursor-default";
             div.innerHTML = `
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-brand-900/40 border border-brand-800/50 flex items-center justify-center text-brand-400 font-bold uppercase">
+                    <div class="w-10 h-10 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-700 font-bold uppercase">
                         ${log.Name.charAt(0)}
                     </div>
                     <div>
-                        <p class="text-sm font-bold text-white leading-tight">${log.Name}</p>
-                        <p class="text-xs text-slate-400 font-medium mt-0.5">ID: #${log.ID}</p>
+                        <p class="text-sm font-bold text-slate-900 leading-tight">${log.Name}</p>
+                        <p class="text-xs text-slate-500 font-medium mt-0.5">ID: #${log.ID}</p>
                     </div>
                 </div>
                 <div class="text-right flex flex-col items-end">
-                    <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-400">
+                    <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600">
                         <i class='bx bxs-check-circle'></i> ${log.Time}
                     </span>
                     <span class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-1">${log.Date}</span>
@@ -334,24 +334,24 @@ async function fetchStudents() {
         studentsBody.innerHTML = '';
         data.forEach(student => {
             const tr = document.createElement('tr');
-            tr.className = "hover:bg-slate-800/50 transition-colors";
+            tr.className = "hover:bg-slate-50 transition-colors";
             tr.innerHTML = `
-                <td class="py-4 px-6 text-sm text-slate-400 font-medium">#${student.id}</td>
-                <td class="py-4 px-6 text-sm text-white font-bold flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 font-bold uppercase overflow-hidden">
+                <td class="py-4 px-6 text-sm text-slate-500 font-medium">#${student.id}</td>
+                <td class="py-4 px-6 text-sm text-slate-900 font-bold flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 font-bold uppercase overflow-hidden">
                         ${student.name.charAt(0)}
                     </div>
                     ${student.name}
                 </td>
                 <td class="py-4 px-6">
-                    <span class="px-2.5 py-1 text-xs font-bold rounded-full bg-emerald-900/40 text-emerald-400 border border-emerald-800/50">Active</span>
+                    <span class="px-2.5 py-1 text-xs font-bold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">Active</span>
                 </td>
                 <td class="py-4 px-6 text-right">
                     <div class="flex items-center justify-end gap-2">
-                        <button class="action-btn edit-btn w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-900/30 text-indigo-400 transition-all border border-indigo-800/50 hover:bg-indigo-600 hover:text-white" onclick="editStudent('${student.id}', '${student.name}')" title="Edit Student">
+                        <button class="action-btn edit-btn w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 transition-all border border-indigo-200 hover:bg-indigo-600 hover:text-white" onclick="editStudent('${student.id}', '${student.name}')" title="Edit Student">
                             <i class='bx bx-edit'></i>
                         </button>
-                        <button class="action-btn delete-btn w-9 h-9 flex items-center justify-center rounded-lg bg-red-900/30 text-red-400 transition-all border border-red-800/50 hover:bg-red-600 hover:text-white" onclick="deleteStudent('${student.id}')" title="Remove Student">
+                        <button class="action-btn delete-btn w-9 h-9 flex items-center justify-center rounded-lg bg-red-50 text-red-600 transition-all border border-red-200 hover:bg-red-600 hover:text-white" onclick="deleteStudent('${student.id}')" title="Remove Student">
                             <i class='bx bx-trash'></i>
                         </button>
                     </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -21,11 +21,11 @@
                             600: '#2563eb',
                             700: '#1d4ed8',
                         },
-                        surface: '#1e293b', // slate-800
-                        bgmain: '#0f172a', // slate-900
-                        bordercolor: '#334155', // slate-700
-                        textmain: '#f8fafc', // slate-50
-                        textmuted: '#94a3b8' // slate-400
+                        surface: '#ffffff', // white
+                        bgmain: '#f8fafc', // slate-50
+                        bordercolor: '#e2e8f0', // slate-200
+                        textmain: '#0f172a', // slate-900
+                        textmuted: '#64748b' // slate-500
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -49,24 +49,24 @@
             <div class="bg-brand-600 text-white p-2 rounded-lg flex items-center justify-center mr-3">
                 <i class='bx bx-scan text-xl'></i>
             </div>
-            <span class="text-xl font-bold tracking-tight text-white">AttendX</span>
+            <span class="text-xl font-bold tracking-tight text-slate-900">AttendX</span>
         </div>
 
         <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
             <a href="#" id="nav-dashboard"
-                class="nav-btn active flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-300 hover:bg-slate-800 hover:text-white">
+                class="nav-btn active flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-100 hover:text-brand-600">
                 <i class='bx bx-grid-alt text-xl'></i>
                 <span>Dashboard</span>
             </a>
 
             <a href="#" id="nav-register"
-                class="nav-btn flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-300 hover:bg-slate-800 hover:text-white">
+                class="nav-btn flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-100 hover:text-brand-600">
                 <i class='bx bx-user-plus text-xl'></i>
                 <span>Register Student</span>
             </a>
 
             <a href="#" id="nav-manage"
-                class="nav-btn flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-300 hover:bg-slate-800 hover:text-white">
+                class="nav-btn flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-100 hover:text-brand-600">
                 <i class='bx bxs-group text-xl'></i>
                 <span>Manage Students</span>
             </a>
@@ -78,16 +78,16 @@
     <main class="flex-1 flex flex-col h-full overflow-hidden relative">
         <!-- Top Navbar -->
         <header class="h-20 bg-surface border-b border-bordercolor flex items-center justify-between px-8 z-10">
-            <h1 class="text-2xl font-bold text-white" id="page-title">Dashboard</h1>
-            <div class="flex items-center gap-4 text-slate-400">
-                <button class="hover:text-white transition-colors"><i class='bx bx-bell text-2xl'></i></button>
-                <button class="hover:text-white transition-colors"><i class='bx bx-help-circle text-2xl'></i></button>
+            <h1 class="text-2xl font-bold text-slate-900" id="page-title">Dashboard</h1>
+            <div class="flex items-center gap-4 text-slate-500">
+                <button class="hover:text-brand-600 transition-colors"><i class='bx bx-bell text-2xl'></i></button>
+                <button class="hover:text-brand-600 transition-colors"><i class='bx bx-help-circle text-2xl'></i></button>
             </div>
         </header>
 
         <!-- Notification Toast -->
         <div id="toast"
-            class="toast hidden fixed bottom-8 right-8 px-6 py-4 rounded-xl shadow-2xl border-l-4 font-medium z-50 transform transition-all duration-300 translate-y-20 opacity-0 bg-slate-800 text-white leading-tight">
+            class="toast hidden fixed bottom-8 right-8 px-6 py-4 rounded-xl shadow-2xl border-l-4 font-medium z-50 transform transition-all duration-300 translate-y-20 opacity-0 bg-white text-slate-800 border border-slate-200 leading-tight">
         </div>
 
         <!-- Dashboard View -->
@@ -102,12 +102,12 @@
                         class="camera-card bg-surface rounded-2xl p-6 shadow-sm border border-bordercolor flex flex-col items-center">
                         <div class="w-full flex justify-between items-center mb-6">
                             <div>
-                                <h2 class="text-xl font-bold text-white">Live Attendance Scanning</h2>
-                                <p class="text-sm text-slate-400 mt-1">Ensure the student is centered in the frame for
+                                <h2 class="text-xl font-bold text-slate-900">Live Attendance Scanning</h2>
+                                <p class="text-sm text-slate-500 mt-1">Ensure the student is centered in the frame for
                                     accurate detection.</p>
                             </div>
                             <span
-                                class="px-3 py-1 bg-emerald-900/40 text-emerald-400 border border-emerald-800/50 text-xs font-bold rounded-full flex items-center gap-2 uppercase tracking-wide">
+                                class="px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold rounded-full flex items-center gap-2 uppercase tracking-wide">
                                 <span
                                     class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
                                 Active
@@ -151,23 +151,23 @@
                         <div
                             class="bg-surface p-6 rounded-2xl border border-bordercolor shadow-sm flex items-center gap-4">
                             <div
-                                class="w-12 h-12 rounded-xl bg-indigo-900/30 flex items-center justify-center text-indigo-400 text-2xl border border-indigo-800/50">
+                                class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 text-2xl border border-indigo-200">
                                 <i class='bx bx-user-check'></i>
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Present Today</p>
-                                <p class="text-3xl font-black text-white mt-1 leading-none" id="present-count">0</p>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Present Today</p>
+                                <p class="text-3xl font-black text-slate-900 mt-1 leading-none" id="present-count">0</p>
                             </div>
                         </div>
                         <div
                             class="bg-surface p-6 rounded-2xl border border-bordercolor shadow-sm flex items-center gap-4">
                             <div
-                                class="w-12 h-12 rounded-xl bg-emerald-900/30 flex items-center justify-center text-emerald-400 text-2xl border border-emerald-800/50">
+                                class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-2xl border border-emerald-200">
                                 <i class='bx bx-shield-check'></i>
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">System Status</p>
-                                <p class="text-xl font-bold text-emerald-400 mt-1 leading-none">Online</p>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">System Status</p>
+                                <p class="text-xl font-bold text-emerald-600 mt-1 leading-none">Online</p>
                             </div>
                         </div>
                     </div>
@@ -177,12 +177,12 @@
                 <div
                     class="w-full lg:w-96 flex flex-col bg-surface rounded-2xl shadow-sm border border-bordercolor h-fit max-h-[calc(100vh-12rem)]">
                     <div
-                        class="p-5 border-b border-bordercolor flex justify-between items-center bg-slate-800/50 rounded-t-2xl">
-                        <h3 class="font-bold text-white flex items-center gap-2">
+                        class="p-5 border-b border-bordercolor flex justify-between items-center bg-slate-50 rounded-t-2xl">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2">
                             <i class='bx bx-time-five text-brand-400 text-lg'></i> Lookups Today
                         </h3>
                         <button id="refresh-logs"
-                            class="text-slate-400 hover:text-white transition-colors bg-slate-700 p-1.5 rounded-lg border border-slate-600 hover:bg-slate-600"><i
+                            class="text-slate-500 hover:text-brand-600 transition-colors bg-white p-1.5 rounded-lg border border-slate-200 hover:bg-slate-50"><i
                                 class='bx bx-refresh text-lg'></i></button>
                     </div>
 
@@ -203,32 +203,32 @@
 
                 <div class="bg-surface rounded-2xl p-8 border border-bordercolor shadow-sm">
                     <div class="mb-6 pb-6 border-b border-bordercolor">
-                        <h2 class="text-xl font-bold text-white flex items-center gap-2"><i
+                        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i
                                 class='bx bx-user text-brand-400'></i> Personal Details</h2>
-                        <p class="text-sm text-slate-400 mt-1">Register a new student and enroll their facial biometric
+                        <p class="text-sm text-slate-500 mt-1">Register a new student and enroll their facial biometric
                             data.</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 register-form">
                         <div class="space-y-2">
-                            <label for="student-name" class="block text-sm font-semibold text-slate-300">Full
+                            <label for="student-name" class="block text-sm font-semibold text-slate-700">Full
                                 Name</label>
                             <input type="text" id="student-name" placeholder="e.g. Alex Johnson"
-                                class="w-full px-4 py-3 rounded-xl border border-slate-600 bg-slate-800 text-white placeholder-slate-500 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 transition-all font-medium"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-600 bg-white text-slate-800 border border-slate-200 placeholder-slate-500 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 transition-all font-medium"
                                 required>
                         </div>
                         <div class="space-y-2">
-                            <label for="student-id" class="block text-sm font-semibold text-slate-300">Student ID / Roll
+                            <label for="student-id" class="block text-sm font-semibold text-slate-700">Student ID / Roll
                                 Number</label>
                             <input type="number" id="student-id" placeholder="e.g. 1001"
-                                class="w-full px-4 py-3 rounded-xl border border-slate-600 bg-slate-800 text-white placeholder-slate-500 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 transition-all font-medium"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-600 bg-white text-slate-800 border border-slate-200 placeholder-slate-500 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 transition-all font-medium"
                                 required>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-surface rounded-2xl p-8 border border-bordercolor shadow-sm register-layout">
-                    <h2 class="text-xl font-bold text-white flex items-center gap-2 mb-6"><i
+                    <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2 mb-6"><i
                             class='bx bx-face text-brand-400'></i> Biometric Enrollment</h2>
 
                     <div class="flex flex-col md:flex-row gap-8">
@@ -239,35 +239,35 @@
 
                         <div class="flex-1 flex flex-col justify-center space-y-6">
                             <div class="space-y-3">
-                                <h4 class="font-bold text-white text-lg">Guidelines for training</h4>
+                                <h4 class="font-bold text-slate-900 text-lg">Guidelines for training</h4>
                                 <ul class="space-y-3">
-                                    <li class="flex items-start gap-3 text-slate-300 text-sm font-medium"><i
+                                    <li class="flex items-start gap-3 text-slate-600 text-sm font-medium"><i
                                             class='bx bxs-check-circle text-emerald-400 text-lg mt-0.5'></i> Ensure the
                                         face is clearly visible and centered.</li>
-                                    <li class="flex items-start gap-3 text-slate-300 text-sm font-medium"><i
+                                    <li class="flex items-start gap-3 text-slate-600 text-sm font-medium"><i
                                             class='bx bxs-check-circle text-emerald-400 text-lg mt-0.5'></i> The
                                         background should be neutral and well-lit.</li>
-                                    <li class="flex items-start gap-3 text-slate-300 text-sm font-medium"><i
+                                    <li class="flex items-start gap-3 text-slate-600 text-sm font-medium"><i
                                             class='bx bxs-check-circle text-emerald-400 text-lg mt-0.5'></i> Avoid
                                         glasses or hats that obscure facial features.</li>
                                 </ul>
                             </div>
 
-                            <div class="bg-brand-900/30 border border-brand-800/50 rounded-xl p-4 flex gap-3">
+                            <div class="bg-brand-50 border border-brand-200 rounded-xl p-4 flex gap-3">
                                 <i class='bx bx-info-circle text-brand-400 text-xl mt-0.5'></i>
-                                <p class="text-sm text-brand-200 leading-relaxed">Training high-quality images improves
+                                <p class="text-sm text-brand-800 leading-relaxed">Training high-quality images improves
                                     recognition accuracy. We will capture <strong id="capture-count"
-                                        class="text-white">0</strong> / 30 frames.</p>
+                                        class="text-brand-900">0</strong> / 30 frames.</p>
                             </div>
 
-                            <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
                                 <div id="capture-progress"
                                     class="bg-brand-500 h-full transition-all duration-300 shadow-[0_0_10px_rgba(59,130,246,0.5)]"
                                     style="width: 0%"></div>
                             </div>
 
                             <button id="btn-start-capture"
-                                class="w-full bg-white hover:bg-slate-200 text-slate-900 px-6 py-3.5 rounded-xl font-semibold shadow-md transition-all flex items-center justify-center gap-2">
+                                class="w-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-xl font-semibold shadow-md transition-all flex items-center justify-center gap-2">
                                 <i class='bx bx-camera text-xl'></i> Capture Frames
                             </button>
                         </div>
@@ -282,11 +282,11 @@
 
                 <div class="flex justify-between items-center">
                     <div>
-                        <h2 class="text-2xl font-bold text-white">Manage Students</h2>
-                        <p class="text-slate-400 mt-1">Edit profiles, manage face data, or remove student records.</p>
+                        <h2 class="text-2xl font-bold text-slate-900">Manage Students</h2>
+                        <p class="text-slate-500 mt-1">Edit profiles, manage face data, or remove student records.</p>
                     </div>
                     <button id="refresh-students"
-                        class="bg-surface border border-bordercolor text-slate-300 hover:bg-slate-700 hover:text-white px-4 py-2 rounded-xl shadow-sm text-sm font-semibold transition-all flex items-center gap-2">
+                        class="bg-surface border border-bordercolor text-slate-600 hover:bg-slate-100 hover:text-brand-600 px-4 py-2 rounded-xl shadow-sm text-sm font-semibold transition-all flex items-center gap-2">
                         <i class='bx bx-refresh text-lg'></i> Refresh List
                     </button>
                 </div>
@@ -295,15 +295,15 @@
                     <div class="w-full overflow-x-auto">
                         <table class="w-full text-left border-collapse">
                             <thead>
-                                <tr class="bg-slate-800/50 border-b border-bordercolor">
-                                    <th class="py-4 px-6 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                <tr class="bg-slate-50 border-b border-bordercolor">
+                                    <th class="py-4 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">
                                         Student ID</th>
-                                    <th class="py-4 px-6 text-xs font-bold text-slate-400 uppercase tracking-wider">Full
+                                    <th class="py-4 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">Full
                                         Name</th>
-                                    <th class="py-4 px-6 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                    <th class="py-4 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider">
                                         Status</th>
                                     <th
-                                        class="py-4 px-6 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">
+                                        class="py-4 px-6 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">
                                         Actions</th>
                                 </tr>
                             </thead>
@@ -331,23 +331,23 @@
 
                 // Update active state
                 navBtns.forEach(b => {
-                    b.classList.remove('bg-brand-900/30', 'text-brand-400', 'font-bold', 'border', 'border-brand-800/50');
-                    b.classList.add('text-slate-300', 'font-medium');
+                    b.classList.remove('bg-brand-50', 'text-brand-700', 'font-bold', 'border', 'border-brand-200');
+                    b.classList.add('text-slate-600', 'font-medium');
                     const icon = b.querySelector('i');
-                    icon.classList.remove('text-brand-400');
+                    icon.classList.remove('text-brand-700');
                 });
 
-                btn.classList.remove('text-slate-300', 'font-medium');
-                btn.classList.add('bg-brand-900/30', 'text-brand-400', 'font-bold', 'border', 'border-brand-800/50');
-                btn.querySelector('i').classList.add('text-brand-400');
+                btn.classList.remove('text-slate-600', 'font-medium');
+                btn.classList.add('bg-brand-50', 'text-brand-700', 'font-bold', 'border', 'border-brand-200');
+                btn.querySelector('i').classList.add('text-brand-700');
             });
         });
 
         // Initialize first active state visually
         const initNav = document.getElementById('nav-dashboard');
-        initNav.classList.remove('text-slate-300', 'font-medium');
-        initNav.classList.add('bg-brand-900/30', 'text-brand-400', 'font-bold', 'border', 'border-brand-800/50');
-        initNav.querySelector('i').classList.add('text-brand-400');
+        initNav.classList.remove('text-slate-600', 'font-medium');
+        initNav.classList.add('bg-brand-50', 'text-brand-700', 'font-bold', 'border', 'border-brand-200');
+        initNav.querySelector('i').classList.add('text-brand-700');
     </script>
 </body>
 
